@@ -1600,7 +1600,7 @@ RSAKey.prototype.decrypt = RSADecrypt;
 //
 // ---
 
-(function(){
+(function(window){
 
 // Generate a new random private key B bits long, using public expt E
 var RSAGenerateAsync = function (B, E, callback) {
@@ -1740,7 +1740,7 @@ var bnpFromNumberAsync = function (a,b,c,callback) {
 };
 BigInteger.prototype.fromNumberAsync = bnpFromNumberAsync;
 
-})();
+})(global || window);
 var b64map="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 var b64pad="=";
 
@@ -3165,7 +3165,7 @@ JSX.extend(KJUR.asn1.DERTaggedObject, KJUR.asn1.ASN1Object);
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
 // copyright notice and this permission notice appear in all copies.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 // WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
@@ -3175,7 +3175,7 @@ JSX.extend(KJUR.asn1.DERTaggedObject, KJUR.asn1.ASN1Object);
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 /*jshint browser: true, strict: true, immed: true, latedef: true, undef: true, regexdash: false */
-(function (undefined) {
+(function (window) {
 "use strict";
 
 var Hex = {},
@@ -3223,14 +3223,14 @@ Hex.decode = function(a) {
 
 // export globals
 window.Hex = Hex;
-})();
+})(global || window);
 // Base64 JavaScript decoder
 // Copyright (c) 2008-2013 Lapo Luchini <lapo@lapo.it>
 
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
 // copyright notice and this permission notice appear in all copies.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 // WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
@@ -3240,7 +3240,7 @@ window.Hex = Hex;
 // OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 /*jshint browser: true, strict: true, immed: true, latedef: true, undef: true, regexdash: false */
-(function (undefined) {
+(function (window) {
 "use strict";
 
 var Base64 = {},
@@ -3309,14 +3309,14 @@ Base64.unarmor = function (a) {
 
 // export globals
 window.Base64 = Base64;
-})();
+})(global || window);
 // ASN.1 JavaScript decoder
 // Copyright (c) 2008-2013 Lapo Luchini <lapo@lapo.it>
 
 // Permission to use, copy, modify, and/or distribute this software for any
 // purpose with or without fee is hereby granted, provided that the above
 // copyright notice and this permission notice appear in all copies.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 // WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
@@ -3327,7 +3327,7 @@ window.Base64 = Base64;
 
 /*jshint browser: true, strict: true, immed: true, latedef: true, undef: true, regexdash: false */
 /*global oids */
-(function (undefined) {
+(function (window) {
 "use strict";
 
 var hardLimit = 100,
@@ -3844,7 +3844,7 @@ ASN1.test = function () {
 
 // export globals
 window.ASN1 = ASN1;
-})();
+})(global || window);
 /**
  * Retrieve the hexadecimal value (as a string) of the current ASN.1 element
  * @returns {string}
